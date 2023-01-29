@@ -268,7 +268,7 @@ def info(update: Update, context: CallbackContext):
 
     text = (
         f"╔═━「<b> Hasil Pencarian:</b> 」\n"
-        f"🆔 ID: <code>{user.id}</code>\n"
+        f"?? ID: <code>{user.id}</code>\n"
         f"👨‍💼 First Name: {html.escape(user.first_name)}"
     )
 
@@ -329,7 +329,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThe Disaster level of this person is 'Soldier'."
         disaster_level_present = True
     elif user.id == 1224143544:
-         text += "\n\nOwner Of A Bot. King Of @JustRex. Bot Name Inspired From 'Anime'."
+         text += "\n\nOwner Of A Bot. King Of @Rizzvbss . "
          disaster_level_present = True
 
     try:
@@ -366,9 +366,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/tirexgugel"),
+                                "Channel", url="https://t.me/kontenfilm"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/rexaprivateroom")
+                                "Group", url="https://t.me/FamilyAlarick")
                         ],
                     ]
                 ),
@@ -384,9 +384,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/tirexgugel"),
+                                "Channel", url="https://t.me/kontenfilm"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/rexaprivateroom")
+                                "Group", url="https://t.me/FamilyAlarick")
                         ],
                     ]
                 ),
@@ -458,7 +458,7 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "🤖 <b>Stats For <a href='https://t.me/HikariManageRobot'>Hikari Robot</a>:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "🤖 <b>Stats For <a href='https://t.me/KynanUserbot'>ҡʏɴλɴ ꭙ ꝛᴏʙᴏᴛ</a>:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     update.effective_message.reply_text(
         result,
