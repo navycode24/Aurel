@@ -93,13 +93,13 @@ PM_START_TEXT = """
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ҡʏɴλɴ ᴋᴇ ɢʀᴏᴜᴘ ➕️", url="t.me/HikariManageRobot?startgroup=true"
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ҡʏɴλɴ ᴋᴇ ɢʀᴏᴜᴘ ➕️", url="t.me/KynanUserbot?startgroup=true"
         ),
     ],
     [
         InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/GeezSupport"
         ),
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ²", url="t.me/ramsupportt"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ²", url="t.me/GeezRam"
         ),
     ],
     [
@@ -514,12 +514,7 @@ def hikari_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="↻˹ҡʏɴλɴ˼𐦝", url="t.me/Riizzvbss"),
-                    InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url="t.me/kontenfilm"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url="t.me/GeezRam"),
-                    InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ²", url="t.me/GeezSupport"),
+                    InlineKeyboardButton(text="**↻˹ҡʏɴλɴ˼𐦝**", url="t.me/Riizzvbss"),
                  ],
                  [
                     InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="hikari_back"),
