@@ -109,7 +109,7 @@ def _check_member(client, message):
                     )
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "😕 **Hikari bukan admin disini..**\n__Beri saya izin larangan dan coba lagi.. \n#Ending FSub...__"
+                        "😕 **Saya bukan admin disini..**\n__Beri saya izin larangan dan coba lagi.. \n#Ending FSub...__"
                     )
 
             except ChatAdminRequired:
