@@ -12,7 +12,7 @@ from Hikari import telethn as tbot, ubot2
 
 @register(pattern="^/asupan ?(.*)")
 async def _(event):
-    memeks = await event.reply("**Mencari Video Asupan...🔍**") 
+    memeks = await event.reply("`Mencari Video Asupan...🔍`") 
     try:
         asupannya = [
             asupan
@@ -24,17 +24,17 @@ async def _(event):
         pantek = await ubot2.download_media(kontols)
         await tbot.send_file(
             event.chat.id, 
-            caption="Nih Asupan nya Kak", 
+            caption="**Nih Asupan nya Kak**", 
             file=pantek
             )
         await memeks.delete()
     except Exception:
-        await memeks.edit("Asupan Mulu")  
+        await memeks.edit("**Asupan nya kosong kesian..**")  
 
 
 @register(pattern="^/ppanime ?(.*)")
 async def _(event):
-    memeks = await event.reply("**Mencari PP Anime...🔍**") 
+    memeks = await event.reply("`Mencari PP Anime...🔍`") 
     try:
         asupannya = [
             asupan
@@ -46,17 +46,17 @@ async def _(event):
         pantek = await ubot2.download_media(kontols)
         await tbot.send_file(
             event.chat.id, 
-            caption="Nih pp animenya", 
+            caption="**Nih pp animenya**", 
             file=pantek
             )
         await memeks.delete()
     except Exception:
-        await memeks.edit("PP animenya ga ada")  
+        await memeks.edit("**PP animenya ga ada**")  
 
 
 @register(pattern="^/wallanime ?(.*)")
 async def _(event):
-    memeks = await event.reply("**Mencari Wallpaper Anime...🔍**") 
+    memeks = await event.reply("`Mencari Wallpaper Anime...`") 
     try:
         asupannya = [
             asupan
@@ -68,17 +68,17 @@ async def _(event):
         pantek = await ubot2.download_media(kontols)
         await tbot.send_file(
             event.chat.id, 
-            caption="Nih Wallpaper Animenya", 
+            caption="**Nih Wallpaper Animenya**", 
             file=pantek
             )
         await memeks.delete()
     except Exception:
-        await memeks.edit("Wallpaper Animenya Kosong")  
+        await memeks.edit("**Wallpaper Animenya Kosong**")  
 
 
 @register(pattern="^/ayang ?(.*)")
 async def _(event):
-    memeks = await event.reply("**Mencari ayang...💕**") 
+    memeks = await event.reply("`Mencari ayang...💕`") 
     try:
         asupannya = [
             asupan
@@ -90,17 +90,17 @@ async def _(event):
         pantek = await ubot2.download_media(kontols)
         await tbot.send_file(
             event.chat.id, 
-            caption="Nih kak ayang nya", 
+            caption="**Nih kak ayang nya....**", 
             file=pantek
             )
         await memeks.delete()
     except Exception:
-        await memeks.edit("Asupannya gaada komsol")  
+        await memeks.edit("**Kasian Jomblo...**")  
         
         
 @register(pattern="^/ppcp ?(.*)")
 async def _(event):
-    memeks = await event.reply("**Mencari Mentahan Foto Couple ...**") 
+    memeks = await event.reply("`Mencari Foto Couple ...`") 
     try:
         asupannya = [
             asupan
@@ -112,12 +112,12 @@ async def _(event):
         pantek = await ubot2.download_media(kontols)
         await tbot.send_file(
             event.chat.id, 
-            caption="Mentahan PP couple by Hikari robot", 
+            caption="**Nih PP Couple Nya..**", 
             file=pantek
             )
         await memeks.delete()
     except Exception:
-        await memeks.edit("Asupannya gaada komsol")  
+        await memeks.edit("**Banyakan Dosa...**")  
         
 @register(pattern="^/bokep?(.*)")
 async def _(event):
@@ -133,12 +133,12 @@ async def _(event):
         pantek = await ubot2.download_media(kontols)
         await tbot.send_file(
             event.chat.id, 
-            caption="Negative Content By Hikari robot", 
+            caption="`Astaghfirullah..`", 
             file=pantek
             )
         await memeks.delete()
     except Exception:
-        await memeks.edit("Asupannya gaada komsol")  
+        await memeks.edit("**Coli Mulu...**")  
         
 @register(pattern="^/bugil ?(.*)")
 async def _(event):
@@ -154,12 +154,12 @@ async def _(event):
         pantek = await ubot2.download_media(kontols)
         await tbot.send_file(
             event.chat.id, 
-            caption="Adult Photos by Hikari robot", 
+            caption="`Insyaf lah wahai anak mude`", 
             file=pantek
             )
         await memeks.delete()
     except Exception:
-        await memeks.edit("Asupannya gaada komsol")  
+        await memeks.edit("**Disuruh insyaf lu..**")  
 
 
 __mod_name__ = "ᴀꜱᴜᴘᴀɴ"
