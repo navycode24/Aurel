@@ -21,7 +21,7 @@ from Hikari.utils.http import get, post
 async def restart(m: Message):
     if m:
         await start_restart_stage(m.chat.id, m.message_id)
-    execvp(executable, [executable, "-m", "NaoRobot"])
+    execvp(executable, [executable, "-m", "Hikari"])
 
 
 def generate_captcha():
