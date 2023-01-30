@@ -121,25 +121,25 @@ async def alive_function(answers):
     bot_state = "Dead" if not await app.get_me() else "Alive"
     ubot_state = "Dead" if not await ubot2.get_me() else "Alive"
     buttons.add(
-        InlineKeyboardButton("Main bot", url="https://t.me/KynanUserbot"),
+        InlineKeyboardButton("Main bot", url="https://t.me/Dark_musikbot"),
         InlineKeyboardButton("Go Inline!", switch_inline_query_current_chat=""),
     )
 
     msg = f"""
-**[ҡʏɴλɴ ꭙ ꝛᴏʙᴏᴛ](https://t.me/KynanUserbot):**
+**[ᴋᴀᴢᴜ ꭙ ꝛᴏʙᴏᴛ](https://t.me/Dark_musikbot):**
 **MainBot:** `{bot_state}`
 **UserBot:** `{ubot_state}`
 **Python:** `{pyver.split()[0]}`
 **Pyrogram:** `{pyrover}`
 **MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
-**Profiles:** [BOT](t.me/{BOT_USERNAME}) | [↻˹ҡʏɴλɴ˼𐦝](t.me/Riizzvbss)
+**Profiles:** [BOT](t.me/{BOT_USERNAME}) | [κ λ z υ](t.me/kenapatagkazu)
 """
     answers.append(
         InlineQueryResultArticle(
             title="Alive",
             description="Check Bot's Stats",
-            thumb_url="https://telegra.ph//file/b5fa050775543872ae0ec.jpg",
+            thumb_url="https://telegra.ph/file/05c7982e106962b905ef4.jpg",
             input_message_content=InputTextMessageContent(
                 msg, disable_web_page_preview=True
             ),
@@ -431,8 +431,8 @@ async def tg_search_func(answers, text, user_id):
 
 
 async def music_inline_func(answers, query):
-    chat_id = -1001812143750
-    group_invite = "https://t.me/joinchat/AyaMusicLog"
+    chat_id = -1001837838911
+    group_invite = "https://t.me/joinchat/logsmusik"
     try:
         messages = [
             m
