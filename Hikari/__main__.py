@@ -245,7 +245,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"<b>ʜᴇʟʟᴏ sᴀʏᴀ ꭙ ꝛᴏʙᴏᴛ!</b>\n<b>𝚄𝚙𝚝𝚒𝚖𝚎:</b> <code>{uptime}</code>",
+            f"<b>ʜᴇʟʟᴏ ᴋᴀᴢᴜ ꭙ ꝛᴏʙᴏᴛ!</b>\n<b>𝚄𝚙𝚝𝚒𝚖𝚎:</b> <code>{uptime}</code>",
             parse_mode=ParseMode.HTML
        )
 
