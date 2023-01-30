@@ -444,8 +444,8 @@ def hikari_about_callback(update, context):
         query.message.edit_text(
             text="🤖 PERINTAH BOT"
             "\n\n • /mstats - Dapatkan 10 Trek Global Stats Teratas, 10 Pengguna Bot Teratas, 10 Obrolan Teratas di bot, 10 Teratas Dimainkan dalam obrolan, dll."
-            "\n\n • /msudolist - Periksa Sudo Pengguna Music,"
-            "\n\n • /mlyrics [Nama Musik] mencari Lirik untuk Musik tertentu di web."
+            "\n\n • /sudolist - Periksa Sudo Pengguna Music,"
+            "\n\n • /lyrics [Nama Musik] mencari Lirik untuk Musik tertentu di web."
             "\n\n • /song [Nama Trek] atau [Tautan YT] - Unduh trek apa pun dari youtube dalam format mp3 atau mp4."
             "\n\n • /player -  Dapatkan Panel Bermain interaktif."
             "\n\n • c singkatan dari pemutaran saluran."
@@ -457,7 +457,7 @@ def hikari_about_callback(update, context):
         )
     elif query.data == "hikari_support":
         query.message.edit_text(
-            text="*📝 Bantuan Perintah Hikari*"
+            text="*📝 Bantuan Perintah Kazu*"
             "\npilih tombol dibawah untuk melihat bantuan perintah Kazu.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
