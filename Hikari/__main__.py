@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *ʜᴇʟʟᴏ {} !*
-⬝ ҡʏɴλɴ ꭙ ꝛᴏʙᴏᴛ [×͜×](https://telegra.ph//file/b5fa050775543872ae0ec.jpg)
+✪ ʜᴀɪ sᴀʏᴀ ᴋᴀᴢᴜ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ [🤖](https://telegra.ph/file/05c7982e106962b905ef4.jpg)
 ────────────────────────
 ◈ *ᴜᴘᴛɪᴍᴇ:* `{}`
 ◈ `{}` *ᴘᴇɴɢɢᴜɴᴀ, ᴅɪ * `{}` *ɢʀᴏᴜᴘ*
@@ -93,18 +93,18 @@ PM_START_TEXT = """
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ ҡʏɴλɴ ᴋᴇ ɢʀᴏᴜᴘ ➕️", url="t.me/KynanUserbot?startgroup=true"
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴏᴜᴘ ➕️", url="t.me/Dark_musikbot?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/GeezSupport"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/kazusupportgrp"
         ),
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ²", url="t.me/GeezRam"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ²", url="t.me/Html12text"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="ᴏᴡɴᴇʀ", url="t.me/Riizzvbss"
+            text="ᴏᴡɴᴇʀ", url="t.me/kenapatagkazu"
         ),
     ],
     [
@@ -115,9 +115,9 @@ buttons = [
        ),
     ],
     [
-        InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url="t.me/kontenfilm"
+        InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url="t.me/Html12text"
         ),
-        InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url="t.me/FamilyAlarick"
+        InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url="t.me/kazusupportgrp"
         ),
     ],
 ]
@@ -126,10 +126,10 @@ buttons = [
 HELP_STRINGS = """
 Klik tombol di bawah ini untuk mendapatkan deskripsi tentang perintah spesifik."""
 
-HIKARI_IMG = "https://telegra.ph/file/b5fa050775543872ae0ec.jpg"
+HIKARI_IMG = "https://telegra.ph/file/05c7982e106962b905ef4.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @Riizzvbss \
+ You can support the project by contacting @kenapatagkazu \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -245,7 +245,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"<b>ʜᴇʟʟᴏ ҡʏɴλɴ ꭙ ꝛᴏʙᴏᴛ!</b>\n<b>𝚄𝚙𝚝𝚒𝚖𝚎:</b> <code>{uptime}</code>",
+            f"<b>ʜᴇʟʟᴏ sᴀʏᴀ ꭙ ꝛᴏʙᴏᴛ!</b>\n<b>𝚄𝚙𝚝𝚒𝚖𝚎:</b> <code>{uptime}</code>",
             parse_mode=ParseMode.HTML
        )
 
@@ -458,7 +458,7 @@ def hikari_about_callback(update, context):
     elif query.data == "hikari_support":
         query.message.edit_text(
             text="*📝 Bantuan Perintah Hikari*"
-            "\npilih tombol dibawah untuk melohat bantuan perintah Hikari.",
+            "\npilih tombol dibawah untuk melihat bantuan perintah Kazu.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -514,7 +514,7 @@ def hikari_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="**↻˹ҡʏɴλɴ˼𐦝**", url="t.me/Riizzvbss"),
+                    InlineKeyboardButton(text="**κ λ z υ**", url="t.me/kenapatagkazu"),
                  ],
                  [
                     InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="hikari_back"),
@@ -788,7 +788,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 951454060:
+        if OWNER_ID != 902478883:
             update.effective_message.reply_text(
                 "I'm free for everyone ❤️ If you wanna make me smile, just join"
                 "[My Channel]({})".format(DONATION_LINK),
@@ -837,7 +837,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "**Aku Hidup Mas ❤️.**",
+                "**ʜᴀʟʟᴏ ᴋᴀᴢᴜ ʀᴏʙᴏᴛ ʜɪᴅᴜᴘ ᴋᴇᴍʙᴀʟɪ.**",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
