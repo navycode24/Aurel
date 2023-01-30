@@ -40,7 +40,7 @@ class Config(object):
    ARQ_API = os.getenv("ARQ_API")  # Get this from @ARQRobot
    ARQ_API_KEY = os.getenv("ARQ_API_KEY")
    ARQ_API_URL = "https://arq.hamker.in"
-   BOT_NAME = "Hikari Robot"
+   BOT_NAME = "Kazu Robot"
    BOT_USERNAME = os.getenv("BOT_USERNAME")
    BOT_ID = os.getenv("BOT_ID")
    OPENWEATHERMAP_ID = "22322"
