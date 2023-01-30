@@ -27,7 +27,7 @@ def get_user_list(__init__, key):
         return json.load(json_file)[key]
 
 # enable logging
-FORMAT = "[Hikari] %(message)s"
+FORMAT = "[Kazu] %(message)s"
 logging.basicConfig(
     handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
     level=logging.INFO,
@@ -38,9 +38,9 @@ logging.getLogger("pyrogram").setLevel(logging.INFO)
 logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLevel(logging.WARNING)
 
 LOGGER = logging.getLogger('[Hikari]')
-LOGGER.info("Hikari is starting. | An Hikari Robot Parts. | Licensed under GPLv3.")
+LOGGER.info("Kazu is starting. | An Kazu Robot Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
-LOGGER.info("Project maintained by: github.com/Rexashh (t.me/JustRex)")
+LOGGER.info("Project maintained by: github.com/ionmusic (t.me/kenapatagkazu)")
 
 # if version < 3.9, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 8:
@@ -59,7 +59,7 @@ if ENV:
     except ValueError:
         raise Exception("Your OWNER_ID env variable is not a valid integer.")
 
-    JOIN_LOGGER = os.environ.get("JOIN_LOGGER", "-1001812143750")
+    JOIN_LOGGER = os.environ.get("JOIN_LOGGER", "-1001287188817")
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
 
     try:
