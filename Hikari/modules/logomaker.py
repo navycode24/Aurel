@@ -196,7 +196,7 @@ async def logo_(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [Hikari Robot](https://t.me/HikariManageRobot)",
+            caption="Logo by [Kazu Robot](https://t.me/Dark_musikbot)",
             force_document=False,
         )
         os.remove(flnme)
