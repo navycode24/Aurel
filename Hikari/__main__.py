@@ -377,7 +377,7 @@ def hikari_about_callback(update, context):
     if query.data == "hikari_":
         query.message.edit_text(
             text="🎧 Bantuan Perintah Music."
-            "\npilih menu di bawah ini untuk melihat bantuan Music Hikari ",
+            "\npilih menu di bawah ini untuk melihat bantuan Music Kazu ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
