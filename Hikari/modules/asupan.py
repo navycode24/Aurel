@@ -39,7 +39,7 @@ async def _(event):
         asupannya = [
             asupan
             async for asupan in ubot2.iter_messages(
-            "@animehikarixa", filter=InputMessagesFilterPhotos
+            "@ppanimeee", filter=InputMessagesFilterPhotos
             )
         ]
         kontols = random.choice(asupannya)
