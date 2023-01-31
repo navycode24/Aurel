@@ -366,9 +366,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Channel", url="https://t.me/kontenfilm"),
+                                "Channel", url="https://t.me/Html12text"),
                             InlineKeyboardButton(
-                                "Group", url="https://t.me/FamilyAlarick")
+                                "Group", url="https://t.me/kazusupportgrp")
                         ],
                     ]
                 ),
@@ -384,9 +384,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Channel", url="https://t.me/kontenfilm"),
+                                "Channel", url="https://t.me/Html12text"),
                             InlineKeyboardButton(
-                                "Group", url="https://t.me/FamilyAlarick")
+                                "Group", url="https://t.me/kazusupportgrp")
                         ],
                     ]
                 ),
