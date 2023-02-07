@@ -99,7 +99,7 @@ buttons = [
     [
         InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/kazusupportgrp"
         ),
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ²", url="t.me/Html12text"
+        InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url="t.me/Html12text"
         ),
     ],
     [
@@ -113,12 +113,6 @@ buttons = [
         InlineKeyboardButton(
             text="ᴅᴏɴᴀsɪ", callback_data="hikari_own"
        ),
-    ],
-    [
-        InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url="t.me/Html12text"
-        ),
-        InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url="t.me/kazusupportgrp"
-        ),
     ],
 ]
 
