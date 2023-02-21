@@ -108,7 +108,7 @@ DEFAULT_WELCOME_MESSAGES = [
     "{first} baru saja tiba. Nonaktifkan Jambe!",  # One Piece Sanji
     "{first} baru saja tiba. Aschente!",  # No Game No Life
     "{first} katakan Aschente untuk bersumpah demi janji.",  # No Game No Life
-    "{first} baru bergabung. apakah kamu membutuhkan hikari?",  # Steins Gate
+    "{first} baru bergabung. apakah kamu membutuhkan kazu?",  # Steins Gate
     "Hiiiii Selamat datang {first}!",  # weeabo shit
     "Hi {first}, apa itu 1000-7?",  # tokyo ghoul
     "Datang. Saya tidak ingin menghancurkan tempat ini",  # hunter x hunter
@@ -120,7 +120,7 @@ DEFAULT_WELCOME_MESSAGES = [
     "Bersiaplah untuk masalah ... Dan buatlah menjadi dua kali lipat",  # Pokemon
     "Hey {first}, apakah Anda Menantang Saya??",  # Shaggy
     "Oh? Anda Mendekati Saya?",  # jojo
-    "hei lihatlah owner saya @JustRex?",  # jojo jap ver
+    "hei lihatlah owner saya @kenapatagkazu?",  # jojo jap ver
     "Aku tidak bisa mengalahkanmu tanpa mendekat",  # jojo
     "Hoho! Lalu datanglah sedekat yang kamu mau.", #jojo
     "Hoho! Dewa juubun chikazukanai youi", #jojo jap ver
