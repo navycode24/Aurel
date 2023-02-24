@@ -4,11 +4,13 @@ import re
 import time
 from functools import partial
 from io import BytesIO
+import Hikari
 import Hikari.modules.sql.welcome_sql as sql
 from Hikari import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
+    EVENT_LOGS,
     DEMONS,
     WOLVES,
     sw,
@@ -235,6 +237,28 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             if new_mem.id in WOLVES:
                 update.effective_message.reply_text(
                     "Aduh! Pengguna Prajurit baru saja bergabung!", reply_to_message_id=reply
+                )
+                continue
+
+            # Welcome yourself
+            elif new_mem.id == bot.id:
+                if not Kynan.ALLOW_CHATS:
+                    with suppress(BadRequest):
+                        update.effective_message.reply_text(
+                            f"Groups are disabled for {bot.first_name}, I'm outta here."
+                        )
+                    bot.leave_chat(update.effective_chat.id)
+                    return
+                bot.send_message(
+                    EVENT_LOGS,
+                    "#NEW_GROUP\n<b>Group name:</b> {}\n<b>ID:</b> <code>{}</code>".format(
+                        html.escape(chat.title),
+                        chat.id,
+                    ),
+                    parse_mode=ParseMode.HTML,
+                )
+                update.effective_message.reply_text(
+                    "Makan Biji Lato-Lato", reply_to_message_id=reply
                 )
                 continue
 
@@ -532,7 +556,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
                 f"<b>User</b>: {mention_html(user.id, user.first_name)}\n"
                 f"<b>ID</b>: <code>{user.id}</code>"
             )
-        elif new_mem.is_bot:
+        elif new_mem.is_bot and user.id != new_mem.id:
             welcome_log = (
                 f"{html.escape(chat.title)}\n"
                 f"#BOT_ADDED\n"
@@ -547,6 +571,8 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
                 f"<b>ID</b>: <code>{new_mem.id}</code>"
             )
         return welcome_log
+
+    return ""
 
 
 def check_not_bot(member, chat_id, message_id, context):
@@ -889,7 +915,7 @@ def welcomemute(update: Update, context: CallbackContext) -> str:
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#WELCOME_MUTE\n"
-                f"<b>• Admin:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<b>ᐉ Admin:</b> {mention_html(user.id, user.first_name)}\n"
                 f"Has toggled welcome mute to <b>OFF</b>."
             )
         if args[0].lower() in ["soft"]:
@@ -900,7 +926,7 @@ def welcomemute(update: Update, context: CallbackContext) -> str:
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#WELCOME_MUTE\n"
-                f"<b>• Admin:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<b>ᐉ Admin:</b> {mention_html(user.id, user.first_name)}\n"
                 f"Has toggled welcome mute to <b>SOFT</b>."
             )
         if args[0].lower() in ["strong"]:
@@ -911,7 +937,7 @@ def welcomemute(update: Update, context: CallbackContext) -> str:
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#WELCOME_MUTE\n"
-                f"<b>• Admin:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<b>ᐉ Admin:</b> {mention_html(user.id, user.first_name)}\n"
                 f"Has toggled welcome mute to <b>STRONG</b>."
             )
         if args[0].lower() in ["captcha"]:
@@ -922,7 +948,7 @@ def welcomemute(update: Update, context: CallbackContext) -> str:
             return (
                 f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#WELCOME_MUTE\n"
-                f"<b>• Admin:</b> {mention_html(user.id, user.first_name)}\n"
+                f"<b>ᐉ Admin:</b> {mention_html(user.id, user.first_name)}\n"
                 f"Has toggled welcome mute to <b>CAPTCHA</b>."
             )
         msg.reply_text(
@@ -1163,17 +1189,17 @@ def user_captcha_button(update: Update, context: CallbackContext):
 WELC_HELP_TXT = (
     "Pesan selamat datang/selamat tinggal grup Anda dapat dipersonalisasi dalam berbagai cara. Jika Anda ingin pesan"
     " untuk dibuat secara individual, seperti pesan selamat datang default, Anda dapat menggunakan variabel *ini*:\n"
-    "  • `{first}`*:* ini mewakili nama *pertama* pengguna\n"
-    "  • `{last}`*:* ini mewakili nama *belakang* pengguna. Default ke *nama depan* jika pengguna tidak memiliki "
+    "  ᐉ `{first}`*:* ini mewakili nama *pertama* pengguna\n"
+    "  ᐉ `{last}`*:* ini mewakili nama *belakang* pengguna. Default ke *nama depan* jika pengguna tidak memiliki "
     "nama Belakang.\n"
-    "  • `{fullname}`*:* ini mewakili nama *lengkap* pengguna. Default ke *nama depan* jika pengguna tidak memiliki "
+    "  ᐉ `{fullname}`*:* ini mewakili nama *lengkap* pengguna. Default ke *nama depan* jika pengguna tidak memiliki "
     "nama Belakang.\n"
-    "  • `{username}`*:* ini mewakili *nama pengguna* pengguna. Default untuk *sebutan* dari pengguna "
+    "  ᐉ `{username}`*:* ini mewakili *nama pengguna* pengguna. Default untuk *sebutan* dari pengguna "
     "nama depan jika tidak memiliki nama pengguna.\n"
-    "  • `{mention}`*:* ini hanya *menyebut* pengguna - menandai mereka dengan nama depan mereka.\n"
-    "  • `{id}`*:* ini mewakili pengguna *id*\n"
-    "  • `{count}`*:* ini mewakili *nomor anggota . pengguna*.\n"
-    "  • `{chatname}`*:* ini mewakili *nama obrolan saat ini*.\n"
+    "  ᐉ `{mention}`*:* ini hanya *menyebut* pengguna - menandai mereka dengan nama depan mereka.\n"
+    "  ᐉ `{id}`*:* ini mewakili pengguna *id*\n"
+    "  ᐉ `{count}`*:* ini mewakili *nomor anggota . pengguna*.\n"
+    "  ᐉ `{chatname}`*:* ini mewakili *nama obrolan saat ini*.\n"
     "\nSetiap variabel HARUS dikelilingi oleh `{}` untuk diganti.\n"
     "Pesan selamat datang juga mendukung penurunan harga, sehingga Anda dapat membuat elemen apa pun menjadi tebal/miring/kode/tautan. "
     "Tombol juga didukung, sehingga Anda dapat membuat sambutan Anda terlihat luar biasa dengan beberapa intro yang bagus "
@@ -1189,10 +1215,10 @@ WELC_HELP_TXT = (
 WELC_MUTE_HELP_TXT = (
     "Anda bisa mendapatkan bot untuk membisukan orang baru yang bergabung dengan grup Anda dan karenanya mencegah robot spam membanjiri grup Anda. "
     "Opsi berikut dimungkinkan::\n"
-    "  • `/welcomemute soft`*:* membatasi anggota baru mengirim media selama 24 jam.\n"
-    "  • `/welcomemute strong`*:* membisukan anggota baru sampai mereka mengetuk tombol sehingga memverifikasi bahwa mereka manusia.\n"
-    "  • `/welcomemute captcha`*:*  membisukan anggota baru sampai mereka memecahkan tombol captcha sehingga memverifikasi bahwa mereka manusia.\n"
-    "  • `/welcomemute off`*:* matikan welcomemute.\n"
+    "  ᐉ `/welcomemute soft`*:* membatasi anggota baru mengirim media selama 24 jam.\n"
+    "  ᐉ `/welcomemute strong`*:* membisukan anggota baru sampai mereka mengetuk tombol sehingga memverifikasi bahwa mereka manusia.\n"
+    "  ᐉ `/welcomemute captcha`*:*  membisukan anggota baru sampai mereka memecahkan tombol captcha sehingga memverifikasi bahwa mereka manusia.\n"
+    "  ᐉ `/welcomemute off`*:* matikan welcomemute.\n"
     "*Catatan:* Mode Strong mengeluarkan pengguna dari obrolan jika mereka tidak memverifikasi dalam 120 detik. Mereka selalu bisa bergabung kembali"
 )
 
@@ -1235,22 +1261,22 @@ def __chat_settings__(chat_id, _):
 
 
 __help__ = """
-*Hanya admin:*
-⩺ /welcome <on/off>*:* disable/deactivate pesan selamat datang.
-⩺ /welcome*:* menunjukkan pengaturan sambutan saat ini.
-⩺ /welcome noformat*:* menunjukkan pengaturan selamat datang saat ini, tanpa pemformatan - berguna untuk mendaur ulang pesan selamat datang Anda!
-⩺ /goodbye*:* penggunaan dan argumen yang sama sebagai `/welcome`.
-⩺ /setwelcome <beberapa teks>*:* atur pesan selamat datang khusus. Jika digunakan membalas media, gunakan media itu.
-⩺ /setgoodbye <beberapa teks>*:* atur pesan selamat tinggal khusus. Jika digunakan membalas media, gunakan media itu.
-⩺ /resetwelcome*:* reset ke pesan selamat datang default.
-⩺ /resetgoodbye*:* reset ke pesan selamat tinggal default.
-⩺ /cleanwelcome <on/off>*:* Pada anggota baru, coba hapus pesan selamat datang sebelumnya untuk menghindari spam obrolan.
-⩺ /welcomemutehelp*:* memberikan informasi tentang penyambutan bisu.
-⩺ /cleanservice <on/off*:* menghapus telegram selamat datang/kirim pesan layanan.
- *Contoh:*
+➣ *Hanya admin:*
+ᐉ /welcome <on/off>*:* disable/deactivate pesan selamat datang.
+ᐉ /welcome*:* menunjukkan pengaturan sambutan saat ini.
+ᐉ /welcome noformat*:* menunjukkan pengaturan selamat datang saat ini, tanpa pemformatan - berguna untuk mendaur ulang pesan selamat datang Anda!
+ᐉ /goodbye*:* penggunaan dan argumen yang sama sebagai `/welcome`.
+ᐉ /setwelcome <beberapa teks>*:* atur pesan selamat datang khusus. Jika digunakan membalas media, gunakan media itu.
+ᐉ /setgoodbye <beberapa teks>*:* atur pesan selamat tinggal khusus. Jika digunakan membalas media, gunakan media itu.
+ᐉ /resetwelcome*:* reset ke pesan selamat datang default.
+ᐉ /resetgoodbye*:* reset ke pesan selamat tinggal default.
+ᐉ /cleanwelcome <on/off>*:* Pada anggota baru, coba hapus pesan selamat datang sebelumnya untuk menghindari spam obrolan.
+ᐉ /welcomemutehelp*:* memberikan informasi tentang penyambutan bisu.
+ᐉ /cleanservice <on/off*:* menghapus telegram selamat datang/kirim pesan layanan.
+➣ *Contoh:*
 pengguna bergabung dengan obrolan, pengguna meninggalkan obrolan.
-*WelcomeMarkdown:*
-⩺ /welcomehelp*:* lihat lebih banyak informasi pemformatan untuk pesan selamat datang/selamat tinggal khusus.
+➣ *WelcomeMarkdown:*
+ᐉ /welcomehelp*:* lihat lebih banyak informasi pemformatan untuk pesan selamat datang/selamat tinggal khusus.
 """
 
 NEW_MEM_HANDLER = MessageHandler(
@@ -1313,7 +1339,7 @@ dispatcher.add_handler(BUTTON_VERIFY_HANDLER)
 dispatcher.add_handler(WELCOME_MUTE_HELP)
 dispatcher.add_handler(CAPTCHA_BUTTON_VERIFY_HANDLER)
 
-__mod_name__ = "ɢʀᴇᴇᴛɪɴɢs"
+__mod_name__ = "Welcome"
 __command_list__ = []
 __handlers__ = [
     NEW_MEM_HANDLER,
