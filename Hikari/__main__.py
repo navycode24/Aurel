@@ -99,7 +99,6 @@ buttons = [
         ),
     ],
     [
-    [
         InlineKeyboardButton(text="🗒️ʙᴀɴᴛᴜᴀɴ", callback_data="hikari_support"
        ),
     ],
