@@ -91,28 +91,23 @@ PM_START_TEXT = """
 """
 
 buttons = [
-        [
-        InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴏᴜᴘ ➕️", url="t.me/Dark_musikbot?startgroup=true"
-        ),
-    ],
     [
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/kazusupportgrp"
-        ),
-        InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url="t.me/Html12text"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/kynansupport"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="ᴏᴡɴᴇʀ", url="t.me/disinikazu"
+            text="ᴏᴡɴᴇʀ", url="t.me/Robotikaazazel"
         ),
     ],
     [
         InlineKeyboardButton(text="🗒️ʙᴀɴᴛᴜᴀɴ", callback_data="hikari_support"
        ),
+    ],
+    [
         InlineKeyboardButton(
-            text="ᴅᴏɴᴀsɪ", callback_data="hikari_own"
-       ),
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴏᴜᴘ ➕️", url="t.me/Dark_musikbot?startgroup=true"
+        ),
     ],
 ]
 
