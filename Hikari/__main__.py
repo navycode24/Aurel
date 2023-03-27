@@ -92,14 +92,13 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="t.me/kynansupport"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="http://t.me/kynansupport"
+        ),
+        InlineKeyboardButton(
+            text="ᴏᴡɴᴇʀ", url="https://t.me/Robotikaazazel"
         ),
     ],
     [
-        InlineKeyboardButton(
-            text="ᴏᴡɴᴇʀ", url="t.me/Robotikaazazel"
-        ),
-    ],
     [
         InlineKeyboardButton(text="🗒️ʙᴀɴᴛᴜᴀɴ", callback_data="hikari_support"
        ),
