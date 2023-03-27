@@ -94,8 +94,13 @@ buttons = [
     [
         InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="https://t.me/kynansupport"
         ),
+    ],
+    [
         InlineKeyboardButton(
-            text="ᴏᴡɴᴇʀ", url="https://t.me/Robotikaazazel"
+            text="ᴏᴡɴᴇʀ¹", url="https://t.me/Robotikaazazel"
+        ),
+        InlineKeyboardButton(
+            text="ᴏᴡɴᴇʀ²", url="https://t.me/DAKSNS"
         ),
     ],
     [
