@@ -92,7 +92,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="http://t.me/kynansupport"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="https://t.me/kynansupport"
         ),
         InlineKeyboardButton(
             text="ᴏᴡɴᴇʀ", url="https://t.me/Robotikaazazel"
@@ -105,7 +105,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴏᴜᴘ ➕️", url="t.me/Dark_musikbot?startgroup=true"
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴏᴜᴘ ➕️", url="https://t.me/Dark_musikbot?startgroup=true"
         ),
     ],
 ]
