@@ -118,7 +118,7 @@ buttons = [
 HELP_STRINGS = """
 Klik tombol di bawah ini untuk mendapatkan deskripsi tentang perintah spesifik."""
 
-HIKARI_IMG = "https://telegra.ph/file/05c7982e106962b905ef4.jpg"
+HIKARI_IMG = "https://telegra.ph//file/591dc2274c6fd6486b35b.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @kenapatagkazu \
