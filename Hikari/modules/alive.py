@@ -9,7 +9,7 @@ from Hikari.events import register
 from Hikari import telethn as tbot
 
 
-PHOTO = "https://telegra.ph//file/a4cbc91fac3e78ebf54c4.jpg"
+PHOTO = "https://telegra.ph//file/591dc2274c6fd6486b35b.jpg"
 
 @register(pattern=("/alive"))
 async def awake(event):
