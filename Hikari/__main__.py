@@ -120,10 +120,10 @@ Klik tombol di bawah ini untuk mendapatkan deskripsi tentang perintah spesifik."
 
 HIKARI_IMG = "https://telegra.ph//file/591dc2274c6fd6486b35b.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @kenapatagkazu \
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """Hai,para pengguna aurel music bot
+ kalian dapat mendukung bot ini dengan cara menghubungi @Robotikaazazel \
+ Satu support dari kalian sangat berarti \
+ semoga kalian suka dengan bot ini selamat menggunakan bot ini dan enjoy salam kenal dari developer azazel ."""
 
 IMPORTED = {}
 MIGRATEABLE = []
