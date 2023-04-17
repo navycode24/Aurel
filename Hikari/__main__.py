@@ -449,8 +449,8 @@ def hikari_about_callback(update, context):
         )
     elif query.data == "hikari_support":
         query.message.edit_text(
-            text="*📝 Bantuan Perintah Kazu*"
-            "\npilih tombol dibawah untuk melihat bantuan perintah Kazu.",
+            text="*📝 Bantuan Perintah Aurel*"
+            "\npilih tombol dibawah untuk melihat bantuan perintah Aurel.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
