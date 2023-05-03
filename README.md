@@ -1,5 +1,4 @@
 
-p align="center">
 
 <img src="https://telegra.ph//file/474351d74344a8402848d.jpg">
 
