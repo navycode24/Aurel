@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *ʜᴇʟʟᴏ {} !*
-✪ ᴀᴜʀᴇʟ  ᴍᴀɴᴀɢᴇᴍᴇɴᴛ  ʀᴏʙᴏᴛ [🤖](https://telegra.ph//file/591dc2274c6fd6486b35b.jpg)
+✪ hai saya king ex robot [🤖](https://graph.org/file/aa247323aa35077918fc1.jpg)
 ────────────────────────
 ◈ *ᴜᴘᴛɪᴍᴇ:* `{}`
 ◈ `{}` *ᴘᴇɴɢɢᴜɴᴀ, ᴅɪ * `{}` *ɢʀᴏᴜᴘ*
@@ -92,15 +92,15 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="https://t.me/kynansupport"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="https://t.me/+UJ1wBswVjlI2OThl"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="ᴏᴡɴᴇʀ¹", url="https://t.me/Robotikaazazel"
+            text="ᴏᴡɴᴇʀ¹", url="https://t.me/Masex77"
         ),
         InlineKeyboardButton(
-            text="ᴏᴡɴᴇʀ²", url="https://t.me/DAKSNS"
+            text="ᴏᴡɴᴇʀ²", url="https://t.me/Masex77"
         ),
     ],
     [
@@ -109,7 +109,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴏᴜᴘ ➕️", url="https://t.me/Dark_musikbot?startgroup=true"
+            text="➕️ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴏᴜᴘ ➕️", url="https://t.me/Kingexrobot?startgroup=true"
         ),
     ],
 ]
@@ -118,12 +118,12 @@ buttons = [
 HELP_STRINGS = """
 Klik tombol di bawah ini untuk mendapatkan deskripsi tentang perintah spesifik."""
 
-HIKARI_IMG = "https://telegra.ph//file/591dc2274c6fd6486b35b.jpg"
+HIKARI_IMG = "https://graph.org/file/aa247323aa35077918fc1.jpg"
 
-DONATE_STRING = """Hai,para pengguna aurel music bot
- kalian dapat mendukung bot ini dengan cara menghubungi @Robotikaazazel \
+DONATE_STRING = """Hai,para pengguna king ex robot
+ kalian dapat mendukung bot ini dengan cara menghubungi @Masex77 \
  Satu support dari kalian sangat berarti \
- semoga kalian suka dengan bot ini selamat menggunakan bot ini dan enjoy salam kenal dari developer azazel ."""
+ semoga kalian suka dengan bot ini selamat menggunakan bot ini ."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -368,8 +368,8 @@ def hikari_about_callback(update, context):
     query = update.callback_query
     if query.data == "hikari_":
         query.message.edit_text(
-            text="🎧 Bantuan Perintah Aurel."
-            "\npilih menu di bawah ini untuk melihat bantuan Music Aurel ",
+            text="🎧 Bantuan Perintah King Ex."
+            "\npilih menu di bawah ini untuk melihat bantuan Music King Ex ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
