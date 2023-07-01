@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *ʜᴇʟʟᴏ {} !*
-✪ Hᴀɪ sᴀʏᴀ ᴋɪɴɢ ᴇx ʀᴏʙᴏᴛ [🤖](https://graph.org/file/aa247323aa35077918fc1.jpg)
+✪ Hɪ sᴀʏᴀ ᴀᴜʀᴇʟ ᴍᴜsɪᴄ ʙᴏᴛ[🤖](https://telegra.ph//file/ede719f75f744df950219.jpg)
 ────────────────────────
 ◈ *ᴜᴘᴛɪᴍᴇ:* `{}`
 ◈ `{}` *ᴘᴇɴɢɢᴜɴᴀ, ᴅɪ * `{}` *ɢʀᴏᴜᴘ*
@@ -92,15 +92,12 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="https://t.me/+UJ1wBswVjlI2OThl"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="https://t.me/+cobEr0NNAekzOWJl"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="ᴏᴡɴᴇʀ¹", url="https://t.me/Masex77"
-        ),
-        InlineKeyboardButton(
-            text="ᴏᴡɴᴇʀ²", url="https://t.me/Masex77"
+            text="ᴏᴡɴᴇʀ", url="https://t.me/cdkagenouu"
         ),
     ],
     [
@@ -118,10 +115,10 @@ buttons = [
 HELP_STRINGS = """
 Klik tombol di bawah ini untuk mendapatkan deskripsi tentang perintah spesifik."""
 
-HIKARI_IMG = "https://graph.org/file/aa247323aa35077918fc1.jpg"
+HIKARI_IMG = "https://telegra.ph//file/ede719f75f744df950219.jpg"
 
-DONATE_STRING = """Hai,para pengguna king ex robot
- kalian dapat mendukung bot ini dengan cara menghubungi @Masex77 \
+DONATE_STRING = """Hai,para pengguna aurel music robot
+ kalian dapat mendukung bot ini dengan cara menghubungi @cdkagenouu \
  Satu support dari kalian sangat berarti \
  semoga kalian suka dengan bot ini selamat menggunakan bot ini ."""
 
@@ -368,8 +365,8 @@ def hikari_about_callback(update, context):
     query = update.callback_query
     if query.data == "hikari_":
         query.message.edit_text(
-            text="🎧 Bantuan Perintah King Ex."
-            "\npilih menu di bawah ini untuk melihat bantuan Music King Ex ",
+            text="🎧 Bantuan Perintah Aurel."
+            "\npilih menu di bawah ini untuk melihat bantuan Music Aurel ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -500,13 +497,13 @@ def hikari_about_callback(update, context):
         )
     elif query.data == "hikari_own":
         query.message.edit_text(
-            text="👨‍💻 Untuk yang ingin berdonasi sebagai ucapan terimakasih kepada Pembuat King ex,"
+            text="👨‍💻 Untuk yang ingin berdonasi sebagai ucapan terimakasih kepada Pembuat Aurel,"
             "\n\n • Silahkan Hubungi Owner atau klik dibawah ini",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="**𝔼𝕩**", url="https://t.me/Masex77"),
+                    InlineKeyboardButton(text="**𝙲𝚒𝚍**", url="https://t.me/cdkagenouu"),
                  ],
                  [
                     InlineKeyboardButton(text="ᴋᴇᴍʙᴀʟɪ", callback_data="hikari_back"),
@@ -829,7 +826,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "**ʜᴀʟʟᴏ ᴋɪɴɢ ᴇx ʀᴏʙᴏᴛ ʜɪᴅᴜᴘ ᴋᴇᴍʙᴀʟɪ.**",
+                "**Hᴀʟᴏ ᴀᴜʀᴇʟ ᴍᴜsɪᴄ ʀᴏʙᴏᴛ ʜɪᴅᴜᴘ ᴋᴇᴍʙᴀʟɪ.**",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
