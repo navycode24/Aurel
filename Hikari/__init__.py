@@ -27,7 +27,7 @@ def get_user_list(__init__, key):
         return json.load(json_file)[key]
 
 # enable logging
-FORMAT = "[Kazu] %(message)s"
+FORMAT = "[KingEx] %(message)s"
 logging.basicConfig(
     handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
     level=logging.INFO,
@@ -38,9 +38,9 @@ logging.getLogger("pyrogram").setLevel(logging.INFO)
 logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLevel(logging.WARNING)
 
 LOGGER = logging.getLogger('[Hikari]')
-LOGGER.info("Kazu is starting. | An Kazu Robot Parts. | Licensed under GPLv3.")
+LOGGER.info("King Ex is starting. | An King Ex Robot Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
-LOGGER.info("Project maintained by: github.com/ionmusic (t.me/kenapatagkazu)")
+LOGGER.info("Project maintained by: github.com/Robotikaazazel (t.me/Masex77)")
 
 # if version < 3.9, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 8:
