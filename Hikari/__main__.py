@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *ʜᴇʟʟᴏ {} !*
-✪ Hɪ sᴀʏᴀ ᴀᴜʀᴇʟ ᴍᴜsɪᴄ ʙᴏᴛ[🤖](https://telegra.ph//file/ede719f75f744df950219.jpg)
+✪ Hɪ sᴀʏᴀ ᴊᴏᴏx ᴍᴜsɪᴄ[🎧](https://telegra.ph//file/08bb31612374ad966c6c6.jpg)
 ────────────────────────
 ◈ *ᴜᴘᴛɪᴍᴇ:* `{}`
 ◈ `{}` *ᴘᴇɴɢɢᴜɴᴀ, ᴅɪ * `{}` *ɢʀᴏᴜᴘ*
@@ -115,9 +115,9 @@ buttons = [
 HELP_STRINGS = """
 Klik tombol di bawah ini untuk mendapatkan deskripsi tentang perintah spesifik."""
 
-HIKARI_IMG = "https://telegra.ph//file/ede719f75f744df950219.jpg"
+HIKARI_IMG = "https://telegra.ph//file/08bb31612374ad966c6c6.jpg"
 
-DONATE_STRING = """Hai,para pengguna aurel music robot
+DONATE_STRING = """Hai,para pengguna Joox Music
  kalian dapat mendukung bot ini dengan cara menghubungi @cdkagenouu \
  Satu support dari kalian sangat berarti \
  semoga kalian suka dengan bot ini selamat menggunakan bot ini ."""
@@ -365,8 +365,8 @@ def hikari_about_callback(update, context):
     query = update.callback_query
     if query.data == "hikari_":
         query.message.edit_text(
-            text="🎧 Bantuan Perintah Aurel."
-            "\npilih menu di bawah ini untuk melihat bantuan Music Aurel ",
+            text="🎧 Bantuan Perintah Joox Music."
+            "\npilih menu di bawah ini untuk melihat bantuan Music Joox ",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -446,8 +446,8 @@ def hikari_about_callback(update, context):
         )
     elif query.data == "hikari_support":
         query.message.edit_text(
-            text="*📝 Bantuan Perintah Aurel*"
-            "\npilih tombol dibawah untuk melihat bantuan perintah Aurel.",
+            text="*📝 Bantuan Perintah Joox Music*"
+            "\npilih tombol dibawah untuk melihat bantuan perintah Joox Music.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -497,7 +497,7 @@ def hikari_about_callback(update, context):
         )
     elif query.data == "hikari_own":
         query.message.edit_text(
-            text="👨‍💻 Untuk yang ingin berdonasi sebagai ucapan terimakasih kepada Pembuat Aurel,"
+            text="👨‍💻 Untuk yang ingin berdonasi sebagai ucapan terimakasih kepada Pembuat Joox Music,"
             "\n\n • Silahkan Hubungi Owner atau klik dibawah ini",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
@@ -826,7 +826,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "**Hᴀʟᴏ ᴀᴜʀᴇʟ ᴍᴜsɪᴄ ʀᴏʙᴏᴛ ʜɪᴅᴜᴘ ᴋᴇᴍʙᴀʟɪ.**",
+                "**Hɪ Jᴏᴏx Mᴜsɪᴄ Sᴜᴅᴀʜ Dɪ Aᴋᴛɪғᴋᴀɴ.**",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
