@@ -9,13 +9,13 @@ from Hikari.events import register
 from Hikari import telethn as tbot
 
 
-PHOTO = "https://telegra.ph//file/ede719f75f744df950219.jpg"
+PHOTO = "https://telegra.ph//file/08bb31612374ad966c6c6.jpg"
 
 @register(pattern=("/alive"))
 async def awake(event):
-  TEXT = f"**ʜɪ [{event.sender.first_name}](tg://user?id={event.sender.id}), Aᴋᴜ ᴀᴜʀᴇʟ ᴍᴜsɪᴄ ʙᴏᴛ.** \n\n"
+  TEXT = f"**ʜɪ [{event.sender.first_name}](tg://user?id={event.sender.id}), ᴀᴋᴜ Jᴏᴏx Mᴜsɪᴄ.** \n\n"
   TEXT += "๏ **ᴀᴋᴜ sᴇʟᴀʟᴜ ʜɪᴅᴜᴘ ᴅᴀɴ ʙᴇᴋᴇʀᴊᴀ** \n\n"
-  TEXT += f"๏ **ᴍʏ ᴏᴡɴᴇʀ : [𝔼𝕩](https://t.me/cdkagenouu)** \n\n"
+  TEXT += f"๏ **ᴍʏ ᴏᴡɴᴇʀ : [ℂ 𝕀 𝔻](https://t.me/cdkagenouu)** \n\n"
   TEXT += f"๏ **ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{telever}` \n\n"
   TEXT += f"๏ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{tlhver}` \n\n"
   TEXT += f"๏ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pyrover}` \n\n"
